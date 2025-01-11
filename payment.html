@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="display: flex; justify-content: center; align-items:center">
+    
+    <form action="" id="payment" class="form" name="myForm">
+        <h1>Payment</h1><br>
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" required><br>
+        <label for="email">Email: </label>
+        <input type="email" name="email" id="email" required><br>
+        <label for="address">Adress:</label>
+        <input type="text" name="address" id="address" required><br>
+        <label for="tel">Tel:</label>
+        <input type="tel" name="tel" id="tel" title="include country code" required>
+        <label for="order-date">Order Date:</label>
+        <input type="datetime-local" name="order-date" id="order-date" required><br>
+        <div>
+            <label for="book">Account Number</label>
+            <input type="text"  title="Must contain only numbers"  maxlength="1" name="book" id="book" required>
+            <input type="text"  title="Must contain only numbers" maxlength="1"   name="book" id="book" required>
+            <input type="text"  title="Must contain only numbers"  maxlength="1" name="book" id="book" required>
+            <input type="text"  title="Must contain only numbers" maxlength="1" name="book" id="book" required>
+            <input type="text"  title="Must contain only numbers" maxlength="1" name="book" id="book" required>
+            <input type="text"  title="Must contain only numbers" maxlength="1" name="book" id="book" required>
+            <input type="text"  title="Must contain only numbers" name="book" maxlength="1" id="book" required>
+            <input type="text"  title="Must contain only numbers" maxlength="1" name="book" id="book" required>
+            <input type="text"  title="Must contain only numbers" maxlength="1" name="book" id="book" required>
+            <input type="text"  title="Must contain only numbers" maxlength="1" name="book" id="book" required>
+            <input type="text"  title="Must contain only numbers" maxlength="1" name="book" id="book" required>
+            <input type="text"  title="Must contain only numbers" maxlength="1" name="book" id="book" required>
+            <input type="text"  title="Must contain only numbers" maxlength="1" name="book" id="book" required>
+        </div>
+        <button onclick="return validateForm()"   class="btn" 
+         
+        >check</button><br>
+        <button onsubmit="display()" type="submit">Pay</button>
+    </form>
+</body>
+<script>
+    function validateForm() {
+        var x = document.forms["myForm"]["book"].value;
+        if (x == "") {
+          alert("Account not found");
+          
+        }
+        else if (x !== ""){
+            alert("Account Found");
+            return true;
+        }
+      };
+function display(){
+    document.getElementById("payment").style.display = "none";
+    document.body.innerText = "Payment successed";
+} 
+</script>
+</html>

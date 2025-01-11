@@ -1,0 +1,409 @@
+*{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+body{ 
+    background-color: rgba(244, 244, 244, 0.885);
+}
+hr{
+    display: none;
+    
+    animation: hrmove 1s ease infinite;
+}
+a{
+    text-decoration: none;
+}
+header{
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 200px;
+    z-index: 999;
+    position: fixed;
+    background-color: #fff;
+    cursor: pointer;
+}
+header li img{
+    width: 150px;
+    justify-content: flex-start;
+}
+header nav{
+    display: none;
+    position: absolute;
+    flex-direction: column;
+    margin-top: 300px;
+    width: 300px;
+    height: 400px;
+    background-color: #d7d7d760;
+    backdrop-filter: blur(10px);
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    animation: anm 0.3s ease-in;
+    box-shadow: 5px 5px 10px white,
+    -5px 5px 10px rgb(106, 106, 106);
+    border-radius: 0 0px 12px 12px;
+}
+@keyframes anm {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+header nav li a{
+    font-weight: 700;
+    color: rgb(50, 50, 56);
+    font-family: sans-serif;
+    text-decoration: none;
+    font-size: 21px;
+}
+header nav li a:hover hr{
+    display: block; 
+    border: 2px solid rgb(0, 119, 255);
+    animation: hrmove 1s ease infinite;
+}
+@keyframes hrmove {
+    0%{
+        width: 0;
+    }
+    50%{
+        width: 100%;
+    } 
+    100%{
+        opacity: 0;
+    }
+}
+.container{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    background-color: rgba(244, 244, 244, 0.885);
+    animation: anima 1.5s ease;
+}
+@keyframes anima {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+.container .content{
+    font-family: sans-serif;
+    font-weight: 300;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px; 
+    animation: anima 1s ease; 
+}
+.container .content .cont{
+    margin-top: 300px;
+    height: 230px;
+    margin-left: -370px;
+    background-image: url(drone_11.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    animation: anima 1s ease;
+    flex-direction: column;
+    width: 500px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 12px 0px 0px;
+    box-shadow: 5px -5px 10px #7b7b7b;
+    backdrop-filter: blur(10px);
+    color: rgb(255, 85, 0);
+    font-weight: 700;
+    -webkit-text-stroke: 3px solid #434343;
+}
+
+@media (max-width: 600) {
+    .container{
+        display: flex;
+        flex-direction: column;
+    }
+    .container .content{
+        flex-direction: column;
+    }
+}
+.container .content .cont p{
+    color: #434343;
+    margin-left: 10px;
+}
+.services{
+    width: 100%; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.services .info-container{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 5%;
+}
+@media (max-width: 600) {
+    .services .info-container{
+        flex-direction: column;
+    }
+}
+.services .info-container .info{
+    width: 20%;
+    overflow: hidden;
+    height: 300px;  
+    margin-left: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgb(220, 220, 220);
+    border-radius: 10px;
+    transition: all .5s ease;
+    cursor: pointer;
+}
+.services .info-container .info:hover{
+    box-shadow: 0 0 10px rgb(144, 144, 144); 
+    scale: 1.05; 
+}
+.services .info-container .info div:nth-child(1){
+    width: 100%;
+    height: 70%;
+}
+.services .info-container .info div:nth-child(1) img{
+    height:100%;
+    border-radius: 10px;
+    z-index: -1;
+}
+.services .info-container .info h3{
+    font-family: sans-serif;
+    margin-bottom: 10px;
+}
+.services .info-container .info h3, .services .info-container .info p{
+    margin-left: 10px;
+    font-family: 'Courier New', Courier, monospace; 
+}
+.services .info-container .info button{
+    margin-top: 10px;
+    margin-left: 10px;
+    padding: 3px;
+    border: 1px solid orangered;
+    background: linear-gradient(to left, white, orangered);
+    border-radius: 5px;
+    color: #434343;
+    font-weight: 700;
+}
+.about{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 10px;
+    text-align: center;
+    font-family: sans-serif;
+}
+.about .info{
+    display: flex;
+    width: 100%;
+    gap: 150px;
+    padding: 10px;
+
+}
+.about .info div{
+    width: 30%;
+    height: 250px;
+    border-radius:12px;
+    background-color: #fff;
+    box-shadow: 0 0 12px gray;
+    text-align: center;
+    transition: all .5s ease;
+}
+.about .info div img{
+    border-radius: 12px;
+}
+.about .info div:hover{
+    margin-top: -10px;
+    box-shadow: 0 0 12px orangered;
+}
+.contact{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+}
+.contact .contact-info{
+    width: 100%;
+    display: flex; 
+    height: 50vh;
+    gap: 20px;
+}
+ 
+.contact .contact-info div:nth-child(1){
+    width: 50%;
+    height: 100%;
+    background-image: url(location_1.jpg);
+     
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-size: cover;
+    background-position: center; 
+    color: rgb(106, 106, 106);
+}
+.contact .contact-info div:nth-child(1) p{
+    z-index: 3; 
+}
+strong{
+    color: black;
+}
+.contact .contact-info div:nth-child(2){
+    padding: 10px;
+    width: 50%;
+}
+.contact .contact-info div:nth-child(2) input, .contact .contact-info div:nth-child(2) textarea{
+    width: 90%;
+    padding: 15px;
+    margin-bottom: 25px;
+    background: #7b7b7ba7; 
+    outline: none;
+    border: none;
+    border-radius: 12px;
+    transition: all .1s ease;
+}
+.contact .contact-info div:nth-child(2) textarea{
+    height: 150px;
+}
+.contact .contact-info div:nth-child(2) input:focus, .contact .contact-info div:nth-child(2) textarea:focus{
+    border: 2px solid rgb(0, 119, 255);
+    box-shadow: 0 0 10px rgb(106, 106, 106);
+}
+.contact .contact-info div:nth-child(2) button{
+    padding: 7px;
+    width: 90%;
+    font-family: sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: white;
+    border: none;
+    background-color: rgb(0, 119, 255); 
+}
+.cart-info{
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cart-info .cart-img{
+    width: 50%;
+    background-image: url(drone\ 1.jpg);
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+}
+.cart-info .img-info{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding:12px ;
+    gap: 21px;
+    font-family: sans-serif;
+    height: 100%;
+    transition: all 1s ease;
+    border-radius: 12px;
+}
+.cart-info .img-info:hover{ 
+    transform: translateX(-100px);
+    box-shadow: 0 0 12px gray; 
+    background-color: #7b7b7ba1;
+    backdrop-filter: blur(10px);
+}
+.cart-info .img-info button{
+    border: none;
+    padding: 10px;
+    background: #00b20f;
+    backdrop-filter: blur(12px);
+    width: 100px;
+    font-weight: 700;
+    color: #fff;
+    border-radius: 6px;
+}
+.btns{
+    display: flex;
+    gap: 50px;
+}
+#return{
+    
+    display: none;
+    background-color: rgb(0, 22, 192);
+}
+#demo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} 
+#Pay{
+    display: none;
+    background-color: rgb(147, 147, 0);
+    justify-content: center;
+}
+.form{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    font-family: sans-serif;
+    padding: 10px;
+    background: linear-gradient( to bottom, rgba(130, 130, 130,0.53), rgba(0, 188, 209, 0.53));
+    margin-top: 50px;
+    backdrop-filter: blur(10px);
+    border-radius: 3px;
+    font-weight: 500;
+    color: #6b6b6b;
+    font-size: 18px;
+}
+.form h1{
+    text-align: center;
+}
+.form input{
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #cacaca;
+    border: none;
+}
+.form input:focus{
+    border: none;
+    outline: none;
+}
+.form label{
+    color: #000000;
+}
+.form div input{ 
+    width: 9px;
+    color: #fff; 
+}
+.form button{
+    padding: 10px;
+    font-weight: 700;
+    color: white;
+    background-color: #00b20f;
+    border: none;
+}
+.form .btn{
+    background-color: #1100d0;
+}
+.form button:active{
+    border: 2px solid white;
+}
